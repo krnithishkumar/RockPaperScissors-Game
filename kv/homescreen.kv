@@ -1,0 +1,29 @@
+# kivy 1.10.0
+
+<HomeScreen>:
+    cols: 3
+	rows: 2
+	Label:
+        font_size: 30  
+        top: root.top
+        text: "Welcome to \nRock - paper -scissor Game"
+	Label:
+        font_size: 20  
+        center_x: root.width / 4
+        top: root.top - 50
+        text: "User Score: "+str(root.count)
+	Label:
+        font_size: 20  
+        center_x: root.width / 4
+        top: root.top - 50
+        text: "Computer Score: "+str(root.count2)+"\nChosed: "+str(root.pc)
+    Button:
+        text: 'Rock'
+        on_press: root.rock()
+        width: 100
+    Button:
+        text: 'Paper'
+        on_press: root.paper()
+	Button:
+		text: 'Scissors'
+		on_press: root.scissor()
